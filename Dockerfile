@@ -12,3 +12,5 @@ RUN cd /tmp && wget -qO- -O tmp.zip https://github.com/mallocator/Elasticsearch-
 && cp -r Elasticsearch-Exporter-master/. /app && rm -rf Elasticsearch-Exporter-master
 
 RUN npm install --production
+
+ENTRYPOINT node exporter.js
